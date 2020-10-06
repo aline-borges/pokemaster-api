@@ -1,31 +1,29 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Teams</h1>
+<div class="container"> 
+  <h1 class="title">Teams</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Trainer</th>
-      <th>Name</th>
-      <th>Pokemons</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <main class="main-container">
+    <section class="team">
+      <% @teams.each do |team| %>
+        <header class="team-header">
+          <h2 class="team-name"><%= team.name %></h2>
+          <h3 class="trainer-name"><%= team.trainer.name %></h3>
+        </header>
+        <team-body>
+          <% team.pokemons.each do |pokemon| %>
+            <h4 class="pokemon-name"><%= pokemon.name %></h4>
+            <img src="https://github.com/ZeChrales/PogoAssets/blob/master/pokemon_icons/pokemon_icon_<%= pokemon.photo %>_00.png?raw=true" />
+          <% end %>
+        </team-body>
+        <div class="crud-list">
+          <p class="crud-team"><%= link_to 'Show', team %></p>
+          <p class="crud-team"><%= link_to 'Edit', edit_team_path(team) %></p>
+          <p class="crud-team"><%= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+        </div>
+      <% end %>
+    </section>
+  </main>
+  <p class="new-team"><%= link_to 'New Team', new_team_path %><p>
 
-  <tbody>
-    <% @teams.each do |team| %>
-      <tr>
-        <td><%= team.trainer.name %></td>
-        <td><%= team.name %></td>
-        <td><%= team.pokemons.name %></td>
-        <td><%= link_to 'Show', team %></td>
-        <td><%= link_to 'Edit', edit_team_path(team) %></td>
-        <td><%= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Team', new_team_path %>
+</div>

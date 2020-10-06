@@ -1,3 +1,100 @@
-// Place all the styles related to the Teams controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
+
+/* COLORS */
+
+$grey: '#2A2B2C';
+$lighyGrey: '#3D3E40';
+$darkYellow: '#FFE600';
+$yellow: '#FBF107';
+$white: '#FEFEFE';
+
+ /* RESET CSS */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+} 
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.6rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  margin-bottom: 1.0rem;
+}
+
+.main-container {
+  display: flex;
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1.0rem;
+}
+
+.team-header {
+  display: flex;
+  padding: 1.0rem;
+}
+
+.team-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-name {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  margin-right: 1.5rem;
+}
+
+.trainer-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.pokemon-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.crud-list {
+  display: flex;
+  margin-top: 1.6rem;
+}
+
+.crud-team {
+  margin-right: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  font-size: 1.0rem;
+
+}
