@@ -10,6 +10,8 @@ class TrainersController < ApplicationController
   # GET /trainers/1
   # GET /trainers/1.json
   def show
+    # @trainer.teams.each do |team| team.pokemons.each do |pokemon| pokemon.id end end
+    render json: @trainer.to_json(:include => {:teams => {:include => [:pokemons]}})
   end
 
   # GET /trainers/new
